@@ -1,0 +1,14 @@
+
+<input class="modal-state" id="modal-1" type="checkbox">
+<div class="modal">
+  <label class="modal-bg" for="modal-1"></label>
+  <div class="modal-body">
+    <label class="btn-close" for="modal-1">X</label>
+    <h4 class="modal-title">{{articleEnfant?.name}}</h4>
+    <h5 class="modal-subtitle">{{articleEnfant?.price}}</h5>
+    <p class="modal-text">This is an example of modal which is implemented with pure CSS! :D</p>
+    <label for="modal-1">Nice!</label>
+    <button (click)="envoyerMessage()">Appel</button>
+  </div>
+</div>
+

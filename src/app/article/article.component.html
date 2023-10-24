@@ -1,0 +1,12 @@
+<div class="row">
+
+    <div class="card "  *ngFor="let article of articles">  
+        <div class="card-body">
+          <h4 class="card-title">{{article.name}}</h4>
+          <div class="row flex-spaces child-borders">
+            <label class="paper-btn margin" for="modal-1" (click)="selectArticle(article)" >Open Modal!</label>
+          </div>
+        </div>
+      </div>
+</div>
+<app-modal-article [articleEnfant] = "articleParent" (messageEnvoye)="recevoirMessage($event)"  ></app-modal-article>

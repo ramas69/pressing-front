@@ -1,6 +1,7 @@
-<div class="container">
-    <h3 *ngFor="let category of categories">
-        <span class="badge ">{{category.id}} - {{category.name}}</span>
+<input type="text" [(ngModel)] ="search" name="nom">
+<div class="container" *ngIf="categories">
+    <h3 *ngFor="let category of categories | filter:search">
+        <span class="badge ">{{category?.id}} - {{category?.name }}</span>
     </h3>
   </div>
   

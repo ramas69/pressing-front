@@ -12,12 +12,15 @@ export class CategoryComponent implements OnInit {
   constructor(private service : CategoryService){}
 
   categories:ICategory[]=[];
+  search:string = "";
 
 ngOnInit() {
     this.service.fetchAll().subscribe(data =>{
       console.log(data);
       
       this.categories = data;
+      
+      
     })
 }
 
